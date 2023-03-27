@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package aix.modelservice;
+
+option java_package = "com.jio.aix.protos.modelservice";
+option java_outer_classname = "DockerContainerCreator";
+
+service ContainerInitiator {
+  rpc LaunchDockerContainer (DockerContainerCreationRequest) returns (DockerContainerCreationResponse);
+  rpc DeleteContainer (DeleteContainerRequest) returns (DeleteContainerResponse);
+}
+
+message DockerContainerCreationRequest {
+  string docker_image = 1;
+  string model_name = 2;
+}
+
+enum ErrorCode {
+		DEFAULT			=	0;
+		SERVICE_ERROR = 1; // temporary - can be fixed
+    REUPLOAD_REQUIRED = 2; // permanent error
+  }
+
+message DockerContainerCreationResponse {
+  string container_id = 1;
+  string container_name = 2;
+  string endpoint_url = 3;
+  ErrorCode error_code = 4;
+  string error_description = 5;
+}
+
+message DeleteContainerRequest {
+  string container_name = 1;
+}
+
+message DeleteContainerResponse {
+  ErrorCode error_code = 1;
+  string error_description = 2;
+}
