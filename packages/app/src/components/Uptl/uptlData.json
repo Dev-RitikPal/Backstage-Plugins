@@ -1,0 +1,106 @@
+[
+  {
+    "pattern": "GitLab SaaS Access",
+    "catalog": "gitlab-saas-access",
+    "description": "A new access model for Gitlab SaaS which leverages RBAC managed via the IDAM service to make access management more efficient, effective and to support inner sourcing across the organisation.",
+    "status": "Agreement",
+    "custodian_name": "James Wood",
+    "custodian_slack": "D03BY5Y1WG7"
+  },
+  {
+    "pattern": "CI/CD Stages",
+    "catalog": "uptl-cicd-agreement",
+    "description": "CI/CD Pipeline stages agreement and repo access etc.",
+    "status": "Demo",
+    "custodian_name": "Mahesh Chahar",
+    "custodian_slack": "D038EPASSVB"
+  },
+  {
+    "pattern": "Security Tooling",
+    "catalog": "security-tooling",
+    "description": "AppSec templates are extensions of Gitlab templates with a few additions, customizations and improvements.",
+    "status": "Implementation",
+    "custodian_name": "Szymon Wyrwiak",
+    "custodian_slack": "D03JJJS2APL"
+  },
+  {
+    "pattern": "Transit Between Accounts",
+    "catalog": "transit-between-accounts",
+    "description": "A transit gateway works across AWS accounts, and you can use AWS RAM to share your transit gateway with other accounts.",
+    "status": "Agreement",
+    "custodian_name": "Karl Malkin",
+    "custodian_slack": "D03TLQD867K"
+  },
+  {
+    "pattern": "Service Discovery and DNS",
+    "catalog": "service-discovery-and-dns",
+    "description": "A method to find the correct ENV endpoints for service-service communications and how multiple envs (sit/uat/etc) can be overlayed on to the existing TLD.",
+    "status": "Product",
+    "custodian_name": "Nathan Flynn",
+    "custodian_slack": "D027B3V3LJ1"
+  },
+  {
+    "pattern": "Tagging",
+    "catalog": "tagging",
+    "description": "Organization Wide Tagging policy for AWS resources",
+    "status": "Implementation",
+    "custodian_name": "Robert King",
+    "custodian_slack": "D03T82MR475"
+  },
+  {
+    "pattern": "Cost Reporting",
+    "catalog": "cost-reporting",
+    "description": "AWS Cloud Cost Reporting",
+    "status": "Inception",
+    "custodian_name": "Abigail Bradley",
+    "custodian_slack": "D03T85N8GV8"
+  },
+  {
+    "pattern": "Common Environment Definition",
+    "catalog": "common-environment-definitions",
+    "description": "Common Environment definitions, usages and network communication",
+    "status": "Implementation",
+    "custodian_name": "Adam Hope",
+    "custodian_slack": "D039VH7RQK1"
+  },
+  {
+    "pattern": "Release Management",
+    "catalog": "release-management",
+    "description": "Release management refers to the process of planning, designing, scheduling, testing, deploying, and controlling software releases.",
+    "status": "Inception",
+    "custodian_name": "Sarah Jones",
+    "custodian_slack": "D03TXSAMPR6"
+  },
+  {
+    "pattern": "Certificate Management",
+    "catalog": "certificate-management",
+    "description": "AWS Foundations PKI - a centrally managed solution to issue and manage certificates for William Hill.",
+    "status": "Product",
+    "custodian_name": "James Wood",
+    "custodian_slack": "D03BY5Y1WG7"
+  },
+  {
+    "pattern": "APM Open Telemetry",
+    "catalog": "apm-open-telemetry",
+    "description": "Trace data and metrics collected from your applications and infrastructure using the OpenTelemetry protocol.",
+    "status": "Product",
+    "custodian_name": "Robert Knowles",
+    "custodian_slack": "D0365N3MYD6"
+  },
+  {
+    "pattern": "ArgoCD",
+    "catalog": "argocd-rfc",
+    "description": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.",
+    "status": "Inception",
+    "custodian_name": "Luis Faustino",
+    "custodian_slack": "D0277BZP2G6"
+  },
+  {
+    "pattern": "Renovate Bot",
+    "catalog": "renovate-rfc",
+    "description": "Automated dependency updates for a variety of platforms and languages.",
+    "status": "Inception",
+    "custodian_name": "Nathan Flynn",
+    "custodian_slack": "D027B3V3LJ1"
+  }
+]

@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package telos.cortex.inference;
+
+option go_package = "telos/cortex/inference";
+option java_package = "com.telos.cortex.inference";
+option java_multiple_files = true;
+
+import "telos/core/base/token.proto";
+import "telos/core/base/status.proto";
+import "telos/core/record/record.proto";
+import "telos/cortex/model/interface/interface.proto";
+
+//Not rpc service for now, will be event based
+//service CortexModelApiInferenceService {
+//  rpc Infer(CortexModelApiInferenceRequestEvent) returns (CortexModelApiInferenceResponseEvent);
+//}
+
+message CortexInferenceGatewaySchema {
+  map<string, model.interface.CortexModelInterfaceSchema> cortex_inference_schema = 1; // key = cortex_api_token.id.key
+}
+
+message InferenceRequestEvent {
+  core.base.Token interface_token = 1;
+  string session_id = 2;
+  core.record.RecordKeyMap records = 3;
+}
+
+//map id,recordkeyMap
+//TBD, key is the interface/function id
+message InferenceBatchRequestEventComposite {
+  map<uint32,core.record.RecordKeyMap> inferenceRecors =1;
+}
+
+
+
+
+
+//TBD
+message InferenceResponseEvent {
+  core.base.Token interface_token = 1;
+  string session_id = 2;
+    core.record.RecordKeyMap records = 3;
+//  map<string,interfaceoutput> out=3;
+  map<string, core.base.Status> status = 4; // key = record_key
+}
+
+// Service Definition Pseudo Code
+//CortexApiResponse api.infer(CortexApiInferenceRequest request) {
+//  CortexApiInputSchema apiInputSchema;
+//  CortexApiInput api_input =  fetch(request.records(), apiInputSchema);
+//  CortexApiOutput api_output = design.infer(api_input);
+//  return api_output;
+//}
+// CortexModelDesignInferenceResponse design.infer(CortexModelDesignInferenceRequest request) {
+//
+// }

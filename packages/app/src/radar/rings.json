@@ -1,0 +1,22 @@
+[
+    {
+        "id": "adopt",
+        "name": "ADOPT",
+        "color": "#93c47d"
+    },
+    {
+        "id": "trial",
+        "name": "TRIAL",
+        "color": "#93d2c2"
+    },
+    {
+        "id": "assess",
+        "name": "ASSESS",
+        "color": "#fbdb84"
+    },
+    {
+        "id": "explore",
+        "name": "EXPLORE",
+        "color": "#efafa9"
+    }
+]

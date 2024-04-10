@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package telos.cortex.model.design;
+
+option go_package = "telos/cortex/model/design";
+option java_package = "com.telos.cortex.model.design";
+option java_multiple_files = true;
+
+import "telos/cortex/algorithms/hyper_parameter.proto";
+import "telos/cortex/model/design/input.proto";
+import "telos/cortex/model/design/output.proto";
+import "telos/core/base/token.proto";
+import "google/protobuf/timestamp.proto";
+import "telos/core/type/set.proto";
+import "telos/cortex/model/design/preprocessor.proto";
+import "telos/cortex/model/design/postprocessor.proto";
+
+message CortexModelDesignSchema {
+  core.base.Token design_token = 1;
+  core.base.Token producer_token = 2;
+  //string variant = 3;                   // not needed for now, we are capturing it in hyper_parameter
+  CortexModelDesignVersion version = 4;
+  CortexModelDesignMetadata metadata = 5;
+  CortexModelDesignInputSchema input = 6;
+  CortexModelDesignOutputSchema output = 7;
+  algorithms.CortexModelHyperParameter hyper_parameter = 8;
+  CortexModelDesignPreprocessorSchema preprocessor = 9;
+  CortexModelDesignPostprocessorSchema postprocessor = 10;
+}
+
+message CortexModelDesignMetadata {
+  string description = 1;
+  telos.core.type.TagSet tags = 2;
+}
+
+message CortexModelDesignVersion {
+  float version = 1;
+  google.protobuf.Timestamp creation_time = 2;
+}

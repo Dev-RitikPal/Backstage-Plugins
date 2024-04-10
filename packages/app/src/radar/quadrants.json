@@ -1,0 +1,18 @@
+[
+    {
+        "id": "infrastructure",
+        "name": "INFRASTRUCTURE"
+    },
+    {
+        "id": "frameworks",
+        "name": "FRAMEWORKS"
+    },
+    {
+        "id": "languages",
+        "name": "LANGUAGES"
+    },
+    {
+        "id": "process",
+        "name": "PROCESS"
+    }
+  ]

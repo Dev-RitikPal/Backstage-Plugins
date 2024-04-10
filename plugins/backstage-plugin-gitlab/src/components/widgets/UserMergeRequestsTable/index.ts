@@ -1,0 +1,1 @@
+export { UserMergeRequestsTable } from './UserMergeRequestsTable';
